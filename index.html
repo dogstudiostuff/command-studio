@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Command Studio</title>
+        <!-- Load Blockly core -->
+        <script src="https://unpkg.com/blockly/blockly_compressed.js"></script>
+        <!-- Load the default blocks -->
+        <script src="https://unpkg.com/blockly/blocks_compressed.js"></script>
+        <!-- Load a generator -->
+        <script src="https://unpkg.com/blockly/javascript_compressed.js"></script>
+        <!-- Load a message file -->
+        <script src="https://unpkg.com/blockly/msg/en.js"></script>
+        <style>
+            #blocklyWorkspace {
+                position: absolute;
+                overflow: hidden;
+                width: 100vw;
+                height: 100vh;
+                z-index: 2;
+                left: 0px;
+                top: 0px;
+            }
+            #generateCommand {
+                position: absolute;
+                overflow: hidden;
+                width: 80px;
+                height: 70px;
+                z-index: 3;
+                right: 10px;
+                top: 10px;
+            }
+        </style>
+        <xml id="toolbox" style="display: none">
+            <category name="Power" colour="#0051ff">
+                <block type="pc_restart"></block>
+                <block type="pc_restart_force"></block>
+                <block type="pc_shutdown"></block>
+                <block type="pc_shutdown_force"></block>
+                <block type="pc_advanced"></block>
+            </category>
+            <category name="Programs" colour="#00aeff">
+                <block type="pc_apps_run"></block>
+                <block type="pc_apps_admin"></block>
+            </category>
+            <category name="Keyboard" colour="#168100">
+                <block type="pc_keyboard_type"></block>
+                <block type="pc_keyboard_enter"></block>
+                <block type="pc_keyboard_key"></block>
+            </category>
+            <category name="Time" colour="#ff8800">
+                <block type="pc_time_wait"></block>
+            </category>
+        </xml>
+    </head>
+    <body>
+        <div id="blocklyWorkspace"></div>
+        <button id="generateCommand">Generate Command</button>
+        <script src="./blockly.js"></script>
+    </body>
+</html>
